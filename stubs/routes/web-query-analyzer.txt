@@ -1,0 +1,5 @@
+Route::get('/query-analyzer', [QueryAnalyzerController::class,'index']);
+
+Route::get('/query-analyzer/tables', [QueryAnalyzerController::class,'tables']);
+Route::get('/query-analyzer/columns/{table}', [QueryAnalyzerController::class,'columns']);
+Route::post('/query-analyzer/execute', [QueryAnalyzerController::class,'execute']);
