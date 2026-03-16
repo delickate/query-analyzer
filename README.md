@@ -27,6 +27,9 @@ Install the package via Composer:
 Copy following routes to routes/web.php
 
 ```bash
+use App\Http\Controllers\QueryAnalyzerController;
+
+
 Route::get('/query-analyzer', [QueryAnalyzerController::class,'index']);
 
 Route::get('/query-analyzer/tables', [QueryAnalyzerController::class,'tables']);
