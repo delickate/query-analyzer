@@ -1,0 +1,34 @@
+{
+    "name": "delickate/query-analyzer",
+    "description": "Analyze and optimize Laravel queries",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Sani Hyne",
+            "email": "delickate@hotmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "illuminate/contracts": "^8.0|^9.0|^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Delickate\\QueryAnalyzer\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Delickate\\QueryAnalyzer\\QueryAnalyzerServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "@php artisan vendor:publish --tag=query-analyzer --force"
+        ]
+    }
+}
