@@ -15,7 +15,7 @@ class QueryAnalyzerServiceProvider extends ServiceProvider
 
         // Publish stubs if needed
         $this->publishes([
-            __DIR__.'/../stubs' => base_path('stubs/query-analyzer'),
+            __DIR__.'/../stubs' => base_path('/'),
         ], 'query-analyzer');
 
         // Load views if your package has any
